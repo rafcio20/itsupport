@@ -1,40 +1,69 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prosta Strona Internetowa</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Your Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Witaj na mojej stronie!</h1>
         <nav>
             <ul>
-                <li><a href="#home">Strona Główna</a></li>
-                <li><a href="#about">O Mnie</a></li>
-                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-    
+
+    <!-- Home Page (index.html) -->
     <section id="home">
-        <h2>Strona Główna</h2>
-        <p>Witaj na mojej prostej stronie internetowej. Znajdziesz tutaj informacje o mnie oraz kontakt ze mną.</p>
+        <h1>Welcome to My Website</h1>
+        <p>I'm a professional IT Specialist with over 7 years of experience in IT Support and Business Partner roles.</p>
     </section>
 
+    <!-- About Page (about.html) -->
     <section id="about">
-        <h2>O Mnie</h2>
-        <p>Jestem pasjonatem programowania, a ta strona to mój pierwszy projekt w HTML i CSS!</p>
+        <h1>About Me</h1>
+        <p>With 7 years of experience in IT Support and as a Business Partner, I specialize in solving technical problems and enhancing business solutions. I have a strong foundation in business processes, risk management, and IT infrastructure, allowing me to effectively support organizations and teams in achieving their goals.</p>
+        <p>I hold a Master’s degree in Finance and Auditing, as well as a Bachelor's degree in Management. I’m also highly skilled in configuring and troubleshooting network systems and managing IT resources.</p>
+        <p>Through my years of work in global teams, I’ve developed excellent communication skills and the ability to adapt to diverse environments.</p>
     </section>
 
+    <!-- Services Page (services.html) -->
+    <section id="services">
+        <h1>Services</h1>
+        <ul>
+            <li>IT Support</li>
+            <li>Business Consulting</li>
+            <li>Cloud Services</li>
+            <li>Infrastructure Setup</li>
+            <li>Network Troubleshooting</li>
+        </ul>
+    </section>
+
+    <!-- Contact Page (contact.html) -->
     <section id="contact">
-        <h2>Kontakt</h2>
-        <p>Możesz się ze mną skontaktować pod adresem email: <a href="mailto:przykladowyemail@example.com">przykladowyemail@example.com</a></p>
+        <h1>Contact</h1>
+        <form action="submit_form.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
     </section>
 
     <footer>
-        <p>&copy; 2024 Moja Prosta Strona Internetowa</p>
+        <p>&copy; 2024 Your Website</p>
     </footer>
 </body>
 </html>
