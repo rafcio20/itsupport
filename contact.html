@@ -1,58 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<section id="contact">
+    <h1>Contact Us</h1>
+    <p>If you have any questions or need more information, feel free to reach out to us using the form below:</p>
 
-    <section id="contact">
-        <h1>Contact Us</h1>
-        <p>If you have any questions or need more information, feel free to reach out to us using the form below:</p>
+    <!-- Styled Contact Form -->
+    <form id="contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLSfpe7cZMhbrBT8xV0obiNO2johd5VGQzQqcPdQ1GQDrjXwQDA/formResponse" method="POST" onsubmit="submitForm(event)">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="entry.1234567890" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="entry.0987654321" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="entry.1122334455" placeholder="Enter your message" rows="5" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
 
-        <!-- Contact Form -->
-    
-        <iframe 
-            src="https://docs.google.com/forms/d/e/1FAIpQLSfpe7cZMhbrBT8xV0obiNO2johd5VGQzQqcPdQ1GQDrjXwQDA/viewform?embedded=true" 
-            width="100%" 
-            height="800px" 
-            frameborder="0">
-            </iframe>
-
-
-            
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="entry.hj99tb2" placeholder="Enter your name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="entry.hj99tb4" placeholder="Enter your email" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea id="message" name="entry.hj99tb6" placeholder="Enter your message" rows="5" required></textarea>
-            </div>
-            <button type="submit">Submit</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Your Website</p>
-    </footer>
-</body>
-</html>
-
+    <!-- Thank You Message -->
+    <div id="thank-you-message" style="display: none;">
+        <h2>Thank you for contacting us!</h2>
+        <p>We appreciate your message and will get back to you shortly.</p>
+    </div>
+</section>
 
