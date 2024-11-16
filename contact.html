@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Contact</title>
+    <title>Contact Responses</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,17 +19,51 @@
     </header>
 
     <section id="contact">
-        <h1>Contact Us</h1>
-        <p>If you have any questions or need more information, feel free to reach out to us using the form below:</p>
-
-        <!-- Embed Google Form here -->
-     
-        
+        <h1>Contact Responses</h1>
+        <div id="response-boxes">
+            <!-- Responses will load here -->
+        </div>
     </section>
 
     <footer>
         <p>&copy; 2024 Your Website</p>
     </footer>
+
+    <script>
+        async function loadResponses() {
+            const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTlLSNaarN6iKcg1Cj5sBp3PwMUc6GuISAUIlq7OOa5JGVobpM1ChvQNt8urJncCAm60BE2dCBLPDRt/pub?gid=1554211757&single=true&output=csv";
+            
+            try {
+                const response = await fetch(url);
+                const text = await response.text();
+
+                const rows = text.split("\n").slice(1); // Skip the header row
+                const responseContainer = document.getElementById("response-boxes");
+
+                rows.forEach(row => {
+                    const columns = row.split(",");
+                    const name = columns[0] || "No Name"; // Adjust the index based on form fields
+                    const email = columns[1] || "No Email";
+                    const message = columns[2] || "No Message";
+
+                    // Create a response box
+                    const box = document.createElement("div");
+                    box.classList.add("response-box");
+                    box.innerHTML = `
+                        <h2>${name}</h2>
+                        <p><strong>Email:</strong> ${email}</p>
+                        <p><strong>Message:</strong> ${message}</p>
+                    `;
+                    responseContainer.appendChild(box);
+                });
+            } catch (error) {
+                console.error("Error loading responses:", error);
+            }
+        }
+
+        // Load responses on page load
+        document.addEventListener("DOMContentLoaded", loadResponses);
+    </script>
 </body>
 </html>
 
