@@ -213,3 +213,17 @@ footer {
 footer p {
     margin: 0;
 }
+#home a button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;  /* Remove underline */
+}
+
+#home a button:hover {
+    background-color: #2980b9;
+}
