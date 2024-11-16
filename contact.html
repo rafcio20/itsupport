@@ -26,3 +26,27 @@
     </div>
 </section>
 
+<script>
+    function submitForm(event) {
+        event.preventDefault(); // Prevent default form submission behavior
+
+        const form = document.getElementById('contact-form');
+        const formData = new FormData(form);
+
+        // Send data to Google Forms
+        fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            mode: 'no-cors', // Required for Google Forms
+        })
+        .then(() => {
+            // Show thank-you message and hide the form
+            form.style.display = 'none';
+            document.getElementById('thank-you-message').style.display = 'block';
+        })
+        .catch(error => {
+            console.error('Error submitting form:', error);
+            alert('There was an error. Please try again later.');
+        });
+    }
+</script>
