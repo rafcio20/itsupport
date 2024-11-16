@@ -213,3 +213,43 @@ footer {
 footer p {
     margin: 0;
 }
+
+/* About page styles */
+#about {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#about h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1.2rem;
+    color: #666;
+    margin: 20px 0;
+}
+
+#about h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+#about ul {
+    list-style: none;
+    text-align: left;
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+#about ul li {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 10px 0;
+}
+
