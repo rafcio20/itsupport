@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Word Generator</title>
+</head>
+<body>
+    <h1>Random Word Generator</h1>
+    <button onclick="generateWord()">Generate Word</button>
+    <p id="wordDisplay"></p>
+
+    <script>
+        const words = ["apple", "banana", "cherry", "date", "elderberry", "fig", "grape", "honeydew", "kiwi", "lemon"];
+
+        function generateWord() {
+            const randomWord = words[Math.floor(Math.random() * words.length)];
+            document.getElementById("wordDisplay").textContent = randomWord;
+        }
+    </script>
+</body>
+</html>
